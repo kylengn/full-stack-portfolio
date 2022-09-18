@@ -92,6 +92,7 @@ body.dark-theme {
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
