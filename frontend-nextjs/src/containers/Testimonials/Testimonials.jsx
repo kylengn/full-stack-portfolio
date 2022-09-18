@@ -92,8 +92,6 @@ const Testimonials = ({ testimonials }) => {
             ))}
           </Swiper>
         </div>
-        {/* <!-- Add Pagination --> */}
-        {/* <div className="swiper-pagination swiper-pagination-testimonial"></div> */}
       </div>
     </>
   );

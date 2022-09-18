@@ -41,8 +41,9 @@ const Portfolio = ({ portfolio }) => {
               <SwiperSlide className="portfolio__content grid" key={idx}>
                 <img
                   src={urlFor(item.projectImg.asset._ref)}
-                  alt=""
+                  alt="portfolio__img"
                   className="portfolio__img"
+                  loading="lazy"
                 />
 
                 <div className="portfolio__data">

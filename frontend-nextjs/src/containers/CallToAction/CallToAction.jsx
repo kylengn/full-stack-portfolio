@@ -15,8 +15,9 @@ const CallToAction = ({ callToAction }) => {
 
           <img
             src={urlFor(callToAction.ctaImg.asset._ref)}
-            alt=""
+            alt="cta__img"
             className="project__img"
+            loading="lazy"
           />
         </div>
       </div>
