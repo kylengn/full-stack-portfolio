@@ -69,7 +69,7 @@ const ServicesContent = ({ services }) => {
         }
       >
         <div className="services__modal-content">
-          <h4 className="services__modal-service">{services.serviceTitle}</h4>
+          <h4 className="services__modal-title">{services.serviceTitle}</h4>
           <UilTimes
             className="services__modal-close"
             onClick={handleModalClose}
