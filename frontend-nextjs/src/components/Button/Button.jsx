@@ -18,7 +18,7 @@ const Button = ({ btnKey, isWhite }) => {
       return (
         <a
           download="true"
-          href={`https://drive.google.com/file/d/1rX3F0ymmpugHLBvHxxXwetx--8w8mNkq/view?usp=sharing`}
+          href={`https://drive.google.com/file/d/1F2wY7cMMfsrh3ov11smvl5iVPiO44-vn/view?usp=sharing`}
           className="button button--flex"
         >
           Download CV{" "}
