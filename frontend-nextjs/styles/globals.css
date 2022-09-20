@@ -198,7 +198,7 @@ img {
 }
 
 .home__blob-img {
-  width: 135px;
+  width: 150px;
 }
 
 .home__data {
@@ -553,9 +553,9 @@ img {
   fill: var(--first-color);
 }
 
-.home__blob-img {
-  width: 120px;
-}
+/* .home__blob-img {
+  width: 150px;
+} */
 
 .home__data {
   grid-column: 1/3;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   UilEstate,
   UilUser,
@@ -9,9 +9,16 @@ import {
   UilTimes,
   UilApps,
   UilMoon,
+  UilSun,
 } from "@iconscout/react-unicons";
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <header className="header" id="header">
       <nav className="nav container">
@@ -56,7 +63,20 @@ const Navbar = () => {
         </div>
         <div className="nav__btns">
           {/* <!-- Theme change button --> */}
-          {/* <UilMoon className="uil uil-moon change-theme" id="theme-button" /> */}
+
+          {!darkMode ? (
+            <UilMoon
+              className="change-theme"
+              id="theme-button"
+              onClick={handleDarkMode}
+            />
+          ) : (
+            <UilSun
+              className="change-theme"
+              id="theme-button"
+              onClick={handleDarkMode}
+            />
+          )}
 
           <div className="nav__toggle" id="nav-toggle">
             <UilApps className="" />
