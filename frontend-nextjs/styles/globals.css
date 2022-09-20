@@ -335,7 +335,7 @@ body.dark-theme {
 /*========== Button Dark/Light ==========*/
 .nav__btns {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .change-theme {

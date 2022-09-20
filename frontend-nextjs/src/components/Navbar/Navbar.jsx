@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   UilEstate,
   UilUser,
@@ -18,6 +18,19 @@ const Navbar = () => {
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+
+  useEffect(() => {
+    let selectedTheme = localStorage.getItem("selected-theme");
+    if (!darkMode && selectedTheme !== "dark-theme") {
+      selectedTheme = "light-theme";
+      setDarkMode(!darkMode);
+    } else {
+      selectedTheme = "dark-theme";
+      setDarkMode(darkMode);
+    }
+    localStorage.setItem("selected-theme", selectedTheme);
+    document.body.classList.toggle(selectedTheme);
+  }, [darkMode]);
 
   return (
     <header className="header" id="header">
@@ -67,14 +80,14 @@ const Navbar = () => {
           {!darkMode ? (
             <UilMoon
               className="change-theme"
-              id="theme-button"
               onClick={handleDarkMode}
+              id="theme-button"
             />
           ) : (
             <UilSun
               className="change-theme"
-              id="theme-button"
               onClick={handleDarkMode}
+              id="theme-button"
             />
           )}
 
