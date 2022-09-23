@@ -30,7 +30,7 @@ const Navbar = () => {
     }
     localStorage.setItem("selected-theme", selectedTheme);
     document.body.classList.toggle(selectedTheme);
-  }, [darkMode]);
+  }, [!darkMode]);
 
   return (
     <header className="header" id="header">
