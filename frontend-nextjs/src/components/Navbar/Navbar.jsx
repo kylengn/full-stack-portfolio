@@ -20,6 +20,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    // Dark Mode Theme
     let selectedTheme = localStorage.getItem("selected-theme");
     if (!darkMode && selectedTheme !== "dark-theme") {
       selectedTheme = "light-theme";
