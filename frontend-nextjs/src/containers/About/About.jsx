@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { urlFor } from "../../client";
 import Button from "../../components/Button/Button";
 import SectionHeadings from "../../components/SectionHeadings/SectionHeadings";
@@ -11,16 +11,16 @@ const About = ({ about }) => {
       <SectionHeadings title={about.title} subtitle={about.subtitle} />
 
       <div className="about__container container grid">
-        {/* <img
+        <img
           src={urlFor(about.about_img)}
           alt="about_img"
           className="about__img"
           loading="lazy"
-        /> */}
+        />
 
-        <div className="about__img">
+        {/* <div className="about__img">
           <Image loader={() => src} src={src} width={300} height={400} />
-        </div>
+        </div> */}
 
         <div className="about__data">
           <p className="about__description">{about.description}</p>
