@@ -13,7 +13,7 @@ import {
 } from "@iconscout/react-unicons";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -31,7 +31,7 @@ const Navbar = () => {
     }
     localStorage.setItem("selected-theme", selectedTheme);
     document.body.classList.toggle(selectedTheme);
-  }, [!darkMode]);
+  }, [darkMode]);
 
   return (
     <header className="header" id="header">
@@ -78,7 +78,7 @@ const Navbar = () => {
         <div className="nav__btns">
           {/* <!-- Theme change button --> */}
 
-          {!darkMode ? (
+          {darkMode ? (
             <UilMoon
               className="change-theme"
               onClick={handleDarkMode}
