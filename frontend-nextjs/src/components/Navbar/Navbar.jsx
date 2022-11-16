@@ -13,7 +13,7 @@ import {
 } from "@iconscout/react-unicons";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -22,13 +22,14 @@ const Navbar = () => {
   useEffect(() => {
     // Dark Mode Theme
     let selectedTheme = localStorage.getItem("selected-theme");
-    if (!darkMode && selectedTheme !== "dark-theme") {
-      selectedTheme = "light-theme";
-      setDarkMode(!darkMode);
-    } else {
-      selectedTheme = "dark-theme";
-      setDarkMode(darkMode);
-    }
+    selectedTheme = "light-theme";
+
+    selectedTheme === "dark-theme"
+      ? (selectedTheme = "light-theme")
+      : (selectedTheme = "dark-theme");
+
+    console.log(selectedTheme);
+    console.log(darkMode);
     localStorage.setItem("selected-theme", selectedTheme);
     document.body.classList.toggle(selectedTheme);
   }, [darkMode]);
@@ -78,7 +79,7 @@ const Navbar = () => {
         <div className="nav__btns">
           {/* <!-- Theme change button --> */}
 
-          {darkMode ? (
+          {!darkMode ? (
             <UilMoon
               className="change-theme"
               onClick={handleDarkMode}
