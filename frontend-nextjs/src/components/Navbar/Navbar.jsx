@@ -28,8 +28,8 @@ const Navbar = () => {
       ? (selectedTheme = "light-theme")
       : (selectedTheme = "dark-theme");
 
-    console.log(selectedTheme);
-    console.log(darkMode);
+    // console.log(selectedTheme);
+    // console.log(darkMode);
     localStorage.setItem("selected-theme", selectedTheme);
     document.body.classList.toggle(selectedTheme);
   }, [darkMode]);
