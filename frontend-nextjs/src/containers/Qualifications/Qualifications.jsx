@@ -12,9 +12,6 @@ const Qualifications = ({ qualifications }) => {
     .map((item) => item._type)
     .reduce((item) => item);
 
-  // console.log(educationStr);
-  // console.log(workStr);
-
   const handleClick = () => {
     setActive(!isActive);
   };
